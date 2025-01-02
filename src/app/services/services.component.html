@@ -1,0 +1,22 @@
+<div class="services-container">
+    <h2 class="section-title">character dans one Piece</h2>
+  
+    <!-- Affichage de chaque service sous forme de carte -->
+    <div class="services-grid">
+      <mat-card *ngFor="let service of services" class="service-card">
+        
+        <!-- Affichage de l'image si disponible -->
+        <div *ngIf="service.image" class="service-image">
+          <img [src]="service.image" alt="Service Image" class="service-image-img">
+        </div>
+  
+        <!-- Titre du service -->
+        <mat-card-title class="service-title">{{ service.title }}</mat-card-title>
+  
+        <!-- Description du service -->
+        <mat-card-content class="service-description">{{ service.description }}</mat-card-content>
+      
+      </mat-card>
+    </div>
+  </div>
+  <app-footer></app-footer>

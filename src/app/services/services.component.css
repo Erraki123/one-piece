@@ -1,0 +1,77 @@
+.services-container {
+    width: 100%;
+    padding: 30px;
+    background-color: #1d1d1d; /* Fond noir */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    color: #f5f5f5; /* Texte clair pour le titre */
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cartes encore plus petites */
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .service-card {
+    border: 1px solid #333; /* Bordure sombre */
+    border-radius: 8px;
+    background-color: #2a2a2a; /* Fond gris foncé pour les cartes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    height: 250px; /* Hauteur encore plus réduite */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .service-image {
+    width: 100%;
+    height: 120%; /* Taille de l'image plus petite */
+    overflow: hidden;
+    border-bottom: 2px solid #444; /* Bordure entre l'image et le reste de la carte */
+  }
+  
+  .service-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Image plus claire */
+    transition: opacity 0.3s ease;
+  }
+  
+  .service-card:hover .service-image-img {
+    opacity: 1; /* Augmenter la clarté au survol */
+  }
+  
+  .service-title {
+    font-size: 0.9rem;
+    color: #f5f5f5; /* Texte clair */
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .service-description {
+    font-size: 0.75rem;
+    color: #ddd; /* Texte de description plus clair */
+    padding: 5px;
+    margin: 0 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .service-card:hover .service-description {
+    color: #f5f5f5; /* Texte clair au survol */
+  }
+  

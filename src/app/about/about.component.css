@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Section Styles */
+.section {
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    margin: 10px;
+    text-align: center;
+    width: 20%;
+}
+
+.image-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.image-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #f39c12;
+}
+
+/* Yonko Section Specific Styles */
+.yonko-section {
+    background-color: #c0392b;
+}
+
+/* Marines Section Specific Styles */
+.marines-section {
+    background-color: #2980b9;
+}
+
+/* Revolutionaries Section Specific Styles */
+.revolutionaries-section {
+    background-color: #27ae60;
+}
+
+/* World Government Section Specific Styles */
+.world-government-section {
+    background-color: #8e44ad;
+}
+
+/* Pirate Crew Section Specific Styles */
+.pirate-crew-section {
+    background-color: #f39c12;
+}
+
+/* Warlords Section Specific Styles */
+.warlords-section {
+    background-color: #818181;
+}
+
+/* Roger Section Specific Styles */
+.roger-section {
+    background-color: #d35400;
+}
+p {
+    font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
+    font-size: 1.2rem; /* Taille légèrement augmentée pour la lisibilité */
+    line-height: 1.8; /* Espacement suffisant pour faciliter la lecture */
+    color: #ddd; /* Couleur claire pour un bon contraste sur un fond sombre */
+    background-color: #1a1a1a; /* Fond sombre mais distinct du body */
+    padding: 25px; /* Espacement généreux autour du texte */
+    border: 1px solid #333; /* Bordure subtile pour délimiter */
+    border-radius: 12px; /* Coins arrondis pour un style moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère pour de la profondeur */
+    margin: 20px 10px; /* Espacement autour des paragraphes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transitions fluides */
+}
+
+p:hover {
+    transform: scale(1.03); /* Zoom subtil au survol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Ombre accentuée au survol */
+    background-color: #222; /* Légère variation de fond au survol */
+}

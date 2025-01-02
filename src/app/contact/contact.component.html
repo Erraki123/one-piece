@@ -1,0 +1,31 @@
+<div class="game-container">
+  <!-- اللاعب -->
+  <div class="player" [style.left.px]="playerPosition.x" [style.top.px]="playerPosition.y" [style.backgroundImage]="'url(' + playerImage + ') '">
+  <br />
+    <div class="health-bar">
+      <div class="health" [style.width.%]="playerHealth"></div>
+    </div>
+  </div>
+
+  <!-- الأعداء -->
+  <div
+    *ngFor="let enemy of enemies"
+    class="enemy"
+    [style.left.px]="enemy.position.x"
+    [style.top.px]="enemy.position.y"
+    [style.backgroundImage]="'url(' + enemy.image + ')'"
+  >
+    <br />
+    <div class="health-bar">
+      <div class="health" [style.width.%]="enemy.health"></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <p>Health: {{ playerHealth }}</p>
+    <p>Score: {{ score }}</p>
+    <p *ngIf="victory" class="message victory">🎉 Congratulations, You Win! 🎉</p>
+    <p *ngIf="gameOver" class="message game-over">💀 Game Over! Try Again! 💀</p>
+    <button class="reset-button" (click)="resetGame()">Reset</button>
+  </div>
+</div>

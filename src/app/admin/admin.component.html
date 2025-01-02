@@ -1,0 +1,101 @@
+<div class="admin-container">
+    <h1>Gestion des Services</h1>
+  
+    <!-- Formulaire pour ajouter une nouvelle service -->
+    <div class="add-service-form">
+      <h2>Ajouter une nouvelle service</h2>
+      <form (submit)="addService(); $event.preventDefault()">
+        <div class="form-group">
+          <label for="title">Titre :</label>
+          <input
+            type="text"
+            id="title"
+            [(ngModel)]="newService.title"
+            name="title"
+            placeholder="Titre de la service"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description :</label>
+          <textarea
+            id="description"
+            [(ngModel)]="newService.description"
+            name="description"
+            placeholder="Description de la service"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="image">Image :</label>
+          <input
+            type="file"
+            id="image"
+            (change)="onFileSelected($event)"
+            name="image"
+            accept="image/*"
+          />
+        </div>
+        <button type="submit" class="btn-submit">Ajouter</button>
+      </form>
+    </div>
+  
+    <!-- Liste des services -->
+    <div class="services-list">
+      <h2>Liste des Services</h2>
+      <ul>
+        <li *ngFor="let service of services">
+          <div class="service-item">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <img *ngIf="service.image" [src]="service.image" alt="{{ service.title }}" class="service-image" />
+            <div class="service-actions">
+              <button class="btn-edit" (click)="editServiceDetails(service)">Modifier</button>
+              <button class="btn-delete" (click)="deleteService(service)">Supprimer</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Formulaire pour modifier une service -->
+    <div *ngIf="editService" class="edit-service-form">
+      <h2>Modifier le service</h2>
+      <form (submit)="saveEditedService(); $event.preventDefault()">
+        <div class="form-group">
+          <label for="editTitle">Titre :</label>
+          <input
+            type="text"
+            id="editTitle"
+            [(ngModel)]="editService.title"
+            name="editTitle"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="editDescription">Description :</label>
+          <textarea
+            id="editDescription"
+            [(ngModel)]="editService.description"
+            name="editDescription"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="editImage">Image :</label>
+          <input
+            type="file"
+            id="editImage"
+            (change)="onEditFileSelected($event)"
+            name="editImage"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Enregistrer</button>
+          <button type="button" class="btn-cancel" (click)="editService = null">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
